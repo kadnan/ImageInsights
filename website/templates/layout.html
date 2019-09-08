@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome to ImgInsights - Searching Images by Color</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row margin-top">
+                <div class="col-2 offset-10 text-center">
+                    <a href="/upload"><i class="fas fa-upload"></i> Upload</a>
+                </div>
+        </div>
+        <div class="row margin-top">
+            <div class="col-12 text-center">
+                <h1 class="logo">ImgInsights</h2>
+                <h4>Search Image by Colors <i class="gcolor fas fa-palette"></i></h3>
+            </div>
+        </div>   
+        <section>
+            {% block content %}{% endblock %}
+        </section>     
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" />
+</body>
+</html>

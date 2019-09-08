@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+</style>
+{% if file_name is  none%}
+    <div  class="row medium-margin-top text-center">
+        <div class="col-4 offset-4">
+            <h3>No record was found</h3>
+        </div>
+    </div>
+{% else %}
+    <div  class="row medium-margin-top">
+            <div class="col-3 offset-2">
+                    <img width="300" height="300" src=" {{url_for('static',filename='uploaded_images/')}}{{file_name}}" alt="">
+            </div>
+            <div class="col-5 offset-2">
+                <div><b>Image Name:</b> {{file_name}}</div>    
+                <div class="margin-top">Dominant Colors </div>
+                <div>
+                    {% if color_gradient is not none %}
+                        {% for color in colors%}
+                            {% for key, value in color.items() %}
+                                <div title="{{key}}" style="margin-top:5px;width:{{value}}; background-color:{{key}};">&nbsp;</div>
+                            {% endfor %}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <!-- <div class="progress">&nbsp;</div> -->
+            </div>
+    </div>
+{% endif %}
+{% endblock %}

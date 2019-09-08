@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="uploaded" method="POST" enctype="multipart/form-data">
+    <div  class="row medium-margin-top">
+        <div class="col-8 offset-1"> 
+            {% if message != '' %}
+                <div class="alert alert-info">{{message}}</div>
+            {% endif%}
+            <div class="form-group">
+                <label class="radio-inline"><input value="1" type="radio" name="upload_type" > Upload via local file</label>
+                <label class="radio-inline"><input value="2" type="radio" name="upload_type" checked> Upload via URL</label>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="file" name="file" id="file">
+            </div>
+            <div class="form-group">
+                <input placeholder="Enter Image URL" class="form-control" type="url" name="url" id="url">
+            </div>
+            <button class="btn btn-info btn-block"><i class="fas fa-upload"></i> Upload</button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

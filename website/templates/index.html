@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="search" method="POST">
+    <div  class="row medium-margin-top">
+        <div class="col-8 offset-2">
+            <div class="form-group">
+                <input placeholder="Enter Color code here: e:g; #2868C7" type="text" name="query" id="query" class="form-control" value="{{request.form['query']}}">
+                <button class="margin-top btn btn-info btn-block">Search</button>
+            </div>
+        </div>            
+    </div>
+</form>
+<div class="row margin-top">
+    {% if results is none %}
+        <div class="col-8 offset-2 text-center">No Record was found</div>
+    {% else %}
+        <div class="col-8 offset-1">
+            <ul class="resultset">
+                {% for result in results %}
+                    <li>
+                        <div>
+                            <a href="view/{{result.img_id}}">
+                            <img 
+                             width="50"
+                             height="50" 
+                             src=" {{url_for('static',filename='uploaded_images/')}}{{result.name}}"
+                             />
+                            </a>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
