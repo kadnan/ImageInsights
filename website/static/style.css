@@ -1,0 +1,36 @@
+.margin-top {
+    margin-top: 30px;
+}
+
+.medium-margin-top {
+    margin-top: 60px;
+}
+
+.logo { color: #d54d7b; font-family: "Great Vibes", cursive; font-size: 75px; line-height: 160px; font-weight: normal; margin-bottom: 0px; margin-top: 40px; text-align: center; text-shadow: 0 1px 1px #fff; }
+
+h4 {
+    color: #333333; font-family: Georgia, serif; font-size: 18px; line-height: 28px; margin: 0 0 28px;
+}
+
+.gcolor {
+    text-transform: uppercase;
+	background: linear-gradient(to left, #30CFD0 30%, #330867 60%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font: {
+		size: 20vw;
+		family: $font;
+	};
+
+}
+
+#query {
+    padding: 30px;
+}
+
+.resultset {
+    padding: none;list-style:none;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
